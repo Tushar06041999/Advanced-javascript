@@ -37,7 +37,7 @@
 //     console.log("Not a valid Number");
 // }
 
-//function Decleration
+// function Decleration
 
 // function myData(multiplay){
 //     var total=multiplay *2;
@@ -60,7 +60,7 @@
 // var result=InchToFeet(averageAge[1]);
 // console.log(result);
 
-//check leap year
+// check leap year
 // var set=2032;
 // var results=set%4;
 // if(results == 0){
@@ -69,7 +69,7 @@
 //     console.log("This is not a leap year");
 // }
 
-//Use Function to declare leap yer and simple year conversation
+// Use Function to declare leap yer and simple year conversation
 // function declareLeapYear(declare){
 //     const fitime=declare%4;
 //     if(fitime == 0){
@@ -82,7 +82,7 @@
 // var update=declareLeapYear(2000);
 // console.log(update);
 
-//Factorial Declareation 
+// Factorial Declareation 
 // 5!=1*2*3*4*5
 // console.log(1*2*3*4*5);
 
@@ -92,7 +92,7 @@
 //    console.log(i,factorial1);
 // }
 
-//Using while loop to declaration factorial
+// Using while loop to declaration factorial
 
 // var i=1;
 // var factorial=1;
@@ -104,7 +104,7 @@
 // console.log(factorial);
 
 
-//Another Way to create factorial and it's the most easiest way ever seen
+// Another Way to create factorial and it's the most easiest way ever seen
 // 5!=4!*5;
 
 // n!=(n-1)!*n
@@ -174,7 +174,7 @@
 // }
 // document.write(studentsId.length);
 
-//switch case default we can use if we don't want to use if else if or else statement
+// switch case default we can use if we don't want to use if else if or else statement
 
 
 // var age=30;
@@ -191,9 +191,9 @@
 // }
 
 
-//practicing if else statement
+// practicing if else statement
 
-//condition suppose you are a university student and you depertment arrange a progrram .if your mark is more than 80 then get a first class ticket
+// condition suppose you are a university student and you depertment arrange a progrram .if your mark is more than 80 then get a first class ticket
 // or your mark is upto 70 to 79 get the second class ticket even you get the third class ticket
 
 // let result=prompt();
@@ -206,7 +206,7 @@
 // }
 
 
-//Declaring function 
+// Declaring function 
 
 // function totalNum(num1,num2){
 //     let total=num1+num2;
@@ -215,14 +215,14 @@
 // var subTotal=totalNum(20,10);
 // console.log(subTotal);
 
-//Another function Declarion Double or Multiplication function
+// Another function Declarion Double or Multiplication function
 // function doThat(num){
 //     let substraction=num*100;
 //     console.log(substraction);
 // }
 // doThat(10);
 
-//Another function method
+// Another function method
 
 // function saySomething(){
 //     document.write("Practice makes a man perfect")
@@ -230,7 +230,7 @@
 // saySomething();
 // saySomething();
 
-//javscript concat Method
+// javscript concat Method
 
 // let num=[1,2,3,4];
 // let num2=[5,6,7,8,9];
@@ -238,7 +238,7 @@
 // let total2=[total];
 // console.log(...num,...num2);
 
-//Es6 class components
+// Es6 class components
 
 // class tushar{
 //     constructor(nId,nCourse){
@@ -253,7 +253,7 @@
 // let student3=new tushar(700,"cst");
 // console.log(studentsProfile,student2,student3);
 
-//Object method property
+// Object method property
 
 // const students={
 //     firstName:"Tushar",
@@ -273,7 +273,7 @@
 //     salary:30000,
 
 // }
-//Bind method
+// Bind method
 
 
 // const NowSalary=students.chargeTax.bind(alom);
@@ -282,20 +282,20 @@
 // console.log(alom.salary);
 
 
-//Call Method
+// Call Method
 
 // students.chargeTax.call(alom,15000,500);
 // students.chargeTax.call(alom,5000,230);
 // console.log(alom.salary);
 
 
-//apply Method .. need to send value with a array
+// apply Method .. need to send value with a array
 
 // students.chargeTax.apply(alom,[50,100,850])
 // console.log(alom.salary);
 
 
-//Creating lot of object using class Method
+// Creating lot of object using class Method
 
 // class students{
 //     constructor(name,id,school,color){
@@ -331,12 +331,55 @@
 // }
 
 
-//set time out function
+// set time out function
 
-function dobetter(){
-    console.log(1111);
-}
-console.log(2222);
-setTimeout(dobetter,100000);
-console.log(3333);
-console.log(4444);
+// function dobetter(){
+//     console.log(1111);
+// }
+// console.log(2222);
+// setTimeout(dobetter,10000);
+// console.log(3333);
+// console.log(4444);
+
+
+
+
+// fetch("http://api.weatherapi.com/v1/current.json?key=2dfb80d86d044708bfd84046211807&q=bangladesh&aqi=no")
+// .then(response => response.json())
+// .then(data => {
+//     console.log(data);
+//     const weather=document.getElementById("weather")
+//     weather.innerText=data.current.temp_c;
+// })
+
+
+//Randomuser Name Declearation from array
+
+// fetch("https://randomuser.me/api/?results=10")
+// .then(response => response.json())
+// .then(data => {
+//     const weather=document.getElementById("weather");
+//     const user=data.results[0];
+//     const username=user.name;
+//     const FullName=`${username.title} ${username.first} ${username.last}`
+//     weather.innerHTML=FullName;
+//     console.log(data);
+// })
+// setInterval(() => {
+    
+// }, 100);
+
+
+//More Api practices
+
+fetch("https://jsonplaceholder.typicode.com/users")
+.then(response => response.json())
+.then(data => {
+    let unique=document.getElementById("first");
+    for (let i = 0; i < data.length; i++) {
+        let user= data[i];
+        let fullName=user.name;
+       unique.innerHTML=fullName;
+       
+    }
+})
